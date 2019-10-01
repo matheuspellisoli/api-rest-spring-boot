@@ -42,7 +42,7 @@ public class PeopleController {
 		PersonModel person = personRepository.findById(id);
 		
 		if(person == null)
-			return new ResponseEntity<>("User not found", HttpStatus.NOT_FOUND);
+			return new ResponseEntity<>("Error - person not found", HttpStatus.NOT_FOUND);
 		return ResponseEntity.ok(person);
 	}
 
