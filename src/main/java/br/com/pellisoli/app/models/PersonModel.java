@@ -19,15 +19,36 @@ public class PersonModel implements Serializable{
 	private String firstName;
 	
 	private String lastName;
-	
-	private String homePhone;
-	
+		
 	private String mobilePhone;
 	
 	private String cpf;
 
 	
 	
+	public PersonModel() {
+		super();
+	}
+
+	public PersonModel(String firstName, String lastName, String mobilePhone, String cpf) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.mobilePhone = mobilePhone;
+		this.cpf = cpf;
+	}
+	
+	
+
+	public PersonModel(long id, String firstName, String lastName, String mobilePhone, String cpf) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.mobilePhone = mobilePhone;
+		this.cpf = cpf;
+	}
+
 	public long getId() {
 		return id;
 	}
@@ -46,14 +67,6 @@ public class PersonModel implements Serializable{
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
-	}
-
-	public String getHomePhone() {
-		return homePhone;
-	}
-
-	public void setHomePhone(String homePhone) {
-		this.homePhone = homePhone;
 	}
 
 	public String getMobilePhone() {

@@ -11,19 +11,16 @@ public class PersonValidation extends Validation<PersonModel>{
 		ArrayList<String> brokenRules = new ArrayList<String>();
 		
 		if (obj == null)
-			brokenRules.add("Erro - passe uma pessoa");
+			brokenRules.add("Error - pass one person");
 		
-		if (obj.getFirstName() == "" && obj.getLastName() == "")
-			brokenRules.add("Erro - Nome invalido");
+		if (obj.getFirstName() == "" || obj.getLastName() == "")
+			brokenRules.add("Error - Invalid Name");
 		
 		if(!validateCPF(obj.getCpf()))
-			brokenRules.add("Erro - CPF invalido");
-		
-		if (obj.getHomePhone() == null || obj.getHomePhone().length() < 10)
-			brokenRules.add("Erro - Telefone fixo invalido");
-		
+			brokenRules.add("Error - Invalid CPF");
+				
 		if(obj.getMobilePhone() == null || obj.getMobilePhone().length() < 10)
-			brokenRules.add("Erro - Telefone celular invalido");
+			brokenRules.add("Error - Invalid Mobile Phone");
 			
 		return brokenRules;
 	}

@@ -33,13 +33,17 @@ public class PeopleController {
 	}
 
 	@GetMapping("/people")
-	public ResponseEntity<List<PersonModel>> get() {
+	public ResponseEntity<List<PersonModel>> getAll() {
 		return ResponseEntity.ok(personRepository.findAll());
 	}
 
 	@GetMapping("/people/{id}")
-	public ResponseEntity<PersonModel> getById(@PathVariable(value = "id") long id) {
-		return ResponseEntity.ok(personRepository.findById(id));
+	public ResponseEntity<Object> getById(@PathVariable(value = "id") long id) {
+		PersonModel person = personRepository.findById(id);
+		
+		if(person == null)
+			return new ResponseEntity<>("User not found", HttpStatus.NOT_FOUND);
+		return ResponseEntity.ok(person);
 	}
 
 	@PostMapping("/people")
