@@ -1,4 +1,6 @@
-## Register person ##
+## API com Spring boot ##
+
+## Register 
 
 * **URL**
 
@@ -146,7 +148,7 @@
 
     - **Code:** 200
 
-## Register person ##
+## PUT
 
 * **URL**
 
