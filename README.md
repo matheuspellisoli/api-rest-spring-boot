@@ -24,7 +24,7 @@
     - **Code:** 200<br>**Content:**
       ```
         {
-            "id": 
+            "id": 1,
             "firstName": "Eliane",
             "lastName": "Rosângela Bernardes",
             "mobilePhone": "7999461760",
@@ -119,3 +119,64 @@
 
     * **Code:** 404 NOT FOUND
     * **Content:** `{ "Error - person not found" }`
+
+## Delete
+
+* **URL**
+
+    `/api/v1/people`
+
+* **Method:**
+
+    `DELETE`
+
+- **Data Params**
+
+     ```
+    {
+        "id": 1,
+        "firstName": "Eliane",
+        "lastName": "Rosângela Bernardes",
+        "mobilePhone": "7999461760",
+        "cpf": "70143815989"
+    }
+    ```
+
+- **Success Response:**
+
+    - **Code:** 200
+
+## Register person ##
+
+* **URL**
+
+    `/api/v1/people`
+
+* **Method:**
+
+    `PUT`
+
+- **Data Params**
+
+     ```
+        {   
+            "id": 1,
+            "firstName": "Eliane",
+            "lastName": "Rosângela Bernardes",
+            "mobilePhone": "7999461760",
+            "cpf": "70143815989"
+	    }
+      ```
+
+- **Success Response:**
+
+    - **Code:** 200<br>**Content:**
+      ```
+        {
+            "id": 1,
+            "firstName": "Eliane",
+            "lastName": "Rosângela Bernardes",
+            "mobilePhone": "7999461760",
+            "cpf": "70143815989"
+	    }
+      ```
